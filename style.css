@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 300vh;
+    min-height: 200vh;
 }
 
 .container {
