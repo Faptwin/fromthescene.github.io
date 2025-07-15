@@ -18,7 +18,7 @@ body {
   padding: 2rem;
   border-radius: 12px;
   max-width: 90vw; /* максимум 90% от ширины экрана */
-  width: 600px;     /* фиксированная ширина на десктопе */
+  width: 1600px;     /* фиксированная ширина на десктопе */
   box-sizing: border-box;
   margin: 0 auto;   /* выравнивание по центру */
   text-align: center;
