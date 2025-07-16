@@ -4,7 +4,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/background.png');
     background-size: cover;
-    background-position: 45% center;
+    background-position: 40% 50%;
     color: white;
     text-align: center;
     display: flex;
@@ -22,6 +22,7 @@ body {
   width: 1600px;     /* фиксированная ширина на десктопе */
   box-sizing: border-box;
   margin: 0 auto;   /* выравнивание по центру */
+  margin-top: 50px;
   text-align: center;
   flex: 1;
 }
