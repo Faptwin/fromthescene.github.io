@@ -72,7 +72,6 @@ h1 {
 .social-icons img {
     width: 24px;
     height: 24px;
-    filter: brightness(0) saturate(100%) invert(12%) sepia(66%) saturate(6665%) hue-rotate(338deg) brightness(90%) contrast(95%);
 }
 
 footer {
