@@ -16,6 +16,7 @@ body {
 .container {
   background-color: rgba(0, 0, 0, 0.3); /* полупрозрачный фон */
   padding: 4rem;
+  padding-top: 60px;
   border-radius: 22px;
   max-width: 90vw; /* максимум 90% от ширины экрана */
   width: 1600px;     /* фиксированная ширина на десктопе */
@@ -54,10 +55,10 @@ h1 {
 }
 
 .social-icons a {
-    width: 45px;
-    height: 45px;
+    width: 44px;
+    height: 44px;
     background: white;
-    border-radius: 100%;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,7 +72,6 @@ h1 {
 .social-icons img {
     width: 32px;
     height: 32px;
-    filter: none;
 }
 
 footer {
