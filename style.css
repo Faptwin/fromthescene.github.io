@@ -16,7 +16,7 @@ body {
 .container {
   background-color: rgba(0, 0, 0, 0.3); /* полупрозрачный фон */
   padding: 4rem;
-  padding-top: 60px;
+  padding-top: 160px;
   border-radius: 22px;
   max-width: 90vw; /* максимум 90% от ширины экрана */
   width: 1600px;     /* фиксированная ширина на десктопе */
