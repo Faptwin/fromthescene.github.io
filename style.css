@@ -4,7 +4,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/background.png');
     background-size: cover;
-    background-position: 35% 50%;
+    background-position: 60% center;
     color: white;
     text-align: center;
     display: flex;
