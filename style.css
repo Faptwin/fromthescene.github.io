@@ -76,13 +76,14 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 40px;
   max-width: 1600px;
   margin: 0 auto;
   justify-content: center;
 }
+
 
 .card {
   perspective: 1000px;
