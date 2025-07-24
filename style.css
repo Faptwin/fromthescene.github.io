@@ -135,7 +135,7 @@ h1 {
   width: 96px;
   height: 38px;
   background-color: white;
-  background-size: 24px;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border: none;
