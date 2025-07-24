@@ -151,11 +151,11 @@ h1 {
 
 /* Иконки */
 .nav-btn.home {
-  background-image: url('icons/Back.PNG');
+  background-image: url('icons/Home.PNG');
 }
 
 .nav-btn.back {
-  background-image: url('icons/Home.PNG');
+  background-image: url('icons/Back.PNG');
 }
 
 .nav-btn.forward {
