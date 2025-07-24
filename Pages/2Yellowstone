@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yellowstone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div class="container">
+    <h1>Yellowstone Hats and Dresses</h1>
+    <img src="Covers/Nike1.jpg" alt="Sneakers" style="width:300px; border-radius:12px; margin-bottom: 30px;" />
+    <p class="subtitle">Hande made hats and dresses by Yellowstone characters.</p>
+
+  <div class="nav-buttons">
+  <button class="nav-btn back" onclick="history.back()"></button>
+  <button class="nav-btn home" onclick="location.href='index.html'"></button>
+  <button class="nav-btn forward" onclick="history.forward()"></button>
+</div>
+
+</div>
+
+  </div>
+
+  <footer>© 2025 From the scene.store — All rights reserved.</footer>
+
+</body>
+</html>
