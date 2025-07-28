@@ -7,36 +7,49 @@
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
- <div class="container">
-  <h1>Back to the Future Sneakers</h1>
+  <div class="container">
+    <h1>Back to the Future Sneakers</h1>
 
-  <div class="gallery-row">
-    <img src="Covers/Nike1.jpg" alt="Nike" onclick="zoomImage(this)">
-    <img src="Covers/Backtothefuture.jpg" alt="Sneaker 2" onclick="zoomImage(this)">
-    <img src="Covers/Nike1.jpg" alt="Sneaker 3" onclick="zoomImage(this)">
+    <div class="gallery-row">
+      <img src="../Covers/Nike1.jpg" alt="Nike" onclick="zoomImage(this)">
+      <img src="../Covers/Backtothefuture.jpg" alt="Sneaker 2" onclick="zoomImage(this)">
+      <img src="../Covers/Nike1.jpg" alt="Sneaker 3" onclick="zoomImage(this)">
+    </div>
+
+    <p class="subtitle">
+      Iconic sneakers worn by Marty McFly in <strong>Back to the Future II</strong> (1989).
+    </p>
+
+    <a class="buy-button" href="https://www.ebay.com/sch/i.html?_nkw=back+to+the+future+sneakers" target="_blank">
+      🔗 View This Product
+    </a>
+
+    <div class="nav-buttons text-buttons">
+      <button onclick="history.back()">← Back</button>
+      <button onclick="location.href='../index.html'">Home</button>
+      <button onclick="location.href='2Yellowstone.html'">Forward →</button>
+    </div>
   </div>
 
-  <p class="subtitle">
-    Iconic sneakers worn by Marty McFly in <strong>Back to the Future II</strong> (1989).
-  </p>
+  <!-- Fullscreen zoom container -->
+  <div id="zoomOverlay" onclick="closeZoom()" style="display: none; position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index: 1000;">
+    <img id="zoomedImage" src="" alt="Zoomed Image" style="max-width: 90%; max-height: 90%;">
+  </div>
 
-  <a class="buy-button" href="https://www.ebay.com/sch/i.html?_nkw=back+to+the+future+sneakers" target="_blank">
-    🔗 View This Product
-  </a>
+  <!-- Zoom JS -->
+  <script>
+    function zoomImage(img) {
+      const zoomOverlay = document.getElementById('zoomOverlay');
+      const zoomedImage = document.getElementById('zoomedImage');
+      zoomedImage.src = img.src;
+      zoomOverlay.style.display = 'flex';
+    }
 
- <div class="nav-buttons text-buttons">
-  <button onclick="history.back()">← Back</button>
-  <button onclick="location.href='../index.html'">Home</button>
-  <button onclick="location.href='2Yellowstone.html'">Forward →</button>
-</div>
-
-</div>
-
-<!-- Fullscreen zoom container -->
-<div id="zoomOverlay" onclick="closeZoom()">
-  <img id="zoomedImage" src="" alt="Zoomed Image">
-</div>
-
+    function closeZoom() {
+      document.getElementById('zoomOverlay').style.display = 'none';
+    }
+  </script>
 
   <footer>© 2025 From the scene.store — All rights reserved.</footer>
 </body>
