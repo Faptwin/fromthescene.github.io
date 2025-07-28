@@ -139,6 +139,20 @@
   };
 </script>
 
+    <script>
+  function zoomImage(img) {
+    const zoomOverlay = document.getElementById('zoomOverlay');
+    const zoomedImage = document.getElementById('zoomedImage');
+    zoomedImage.src = img.src;
+    zoomOverlay.style.display = 'flex';
+  }
+
+  function closeZoom() {
+    document.getElementById('zoomOverlay').style.display = 'none';
+  }
+</script>
+
+
 
 </body>
 </html>
