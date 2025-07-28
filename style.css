@@ -230,7 +230,7 @@ h1 {
   opacity: 0;
   pointer-events: none;
   z-index: 9999;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .page-transition.active {
