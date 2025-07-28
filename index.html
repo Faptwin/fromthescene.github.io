@@ -5,7 +5,7 @@
     <title>From the Scene</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="../icons/favicon.ico">
+    <link rel="icon" type="image/png" href="icons/favicon.ico">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X722H14S20"></script>
     <script>
@@ -40,56 +40,28 @@
       {
         front: "Covers/blank.jpg",
         back: "Covers/blank.jpg",
-        link: "Pages/1Back_to_the_future.html"
+        link: "Pages/1Back_to_the_future.html",
+        title: "Back to the Future"
       },
       {
         front: "Covers/blank.jpg",
         back: "Covers/blank.jpg",
-        link: "Pages/2Yellowstone.html"
+        link: "Pages/2Yellowstone.html",
+        title: "Yellowstone"
       },
       {
         front: "Covers/blank.jpg",
         back: "Covers/blank.jpg",
-        link: "Pages/3Product.html"
-      },
-      {
-        front: "images/shoe4-front.jpg",
-        back: "images/shoe4-back.jpg",
-        link: "product4.html"
-      },
-      {
-        front: "images/shoe5-front.jpg",
-        back: "images/shoe5-back.jpg",
-        link: "product5.html"
-      },
-      {
-        front: "images/shoe6-front.jpg",
-        back: "images/shoe6-back.jpg",
-        link: "product6.html"
-      },
-      {
-        front: "images/shoe7-front.jpg",
-        back: "images/shoe7-back.jpg",
-        link: "product7.html"
-      },
-      {
-        front: "images/shoe8-front.jpg",
-        back: "images/shoe8-back.jpg",
-        link: "product8.html"
-      },
-      {
-        front: "images/shoe9-front.jpg",
-        back: "images/shoe9-back.jpg",
-        link: "product9.html"
-      },
-      {
-        front: "images/shoe10-front.jpg",
-        back: "images/shoe10-back.jpg",
-        link: "product10.html"
+        link: "Pages/3Product.html",
+        title: "Third Product"
       }
+      // Дополнительные карточки можно добавить при необходимости
     ];
 
-    function createCard({ front, back, link }) {
+    function createCard({ front, back, link, title }) {
+      const cardWrapper = document.createElement("div");
+      cardWrapper.className = "card-wrapper";
+
       const a = document.createElement("a");
       a.href = link;
       a.className = "card";
@@ -99,64 +71,66 @@
           <div class="card-back"><img src="${back}" alt=""></div>
         </div>
       `;
-      return a;
+
+      const caption = document.createElement("p");
+      caption.className = "card-title";
+      caption.textContent = title;
+
+      cardWrapper.appendChild(a);
+      cardWrapper.appendChild(caption);
+
+      return cardWrapper;
     }
 
     items.forEach(item => grid.appendChild(createCard(item)));
     </script>
 
     <footer>
-  © 2025 From the scene.store — All rights reserved. |
-  <a href="privacy.html" style="color: #fff; text-decoration: underline;">Privacy Policy</a>
-</footer>
+      © 2025 From the scene.store — All rights reserved. |
+      <a href="privacy.html" style="color: #fff; text-decoration: underline;">Privacy Policy</a>
+    </footer>
 
-   
-<div id="cookie-banner" class="cookie-banner">
-  <p>
-    We use cookies to enhance your experience, analyze site usage, and assist in marketing efforts.
-    Read our <a href="/privacy.html" target="_blank">Privacy Policy</a>.
-  </p>
-  <div class="cookie-buttons">
-    <button onclick="acceptCookies()">Accept</button>
-    <button onclick="rejectCookies()">Reject</button>
-  </div>
-</div>
-
-
- <script>
-  function acceptCookies() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    document.getElementById('cookie-banner').style.display = 'none';
-    // включи здесь логику, если нужно запускать аналитики
-  }
-
-  function rejectCookies() {
-    localStorage.setItem('cookieConsent', 'rejected');
-    document.getElementById('cookie-banner').style.display = 'none';
-  }
-
-  window.onload = function () {
-    const consent = localStorage.getItem('cookieConsent');
-    if (consent === 'accepted' || consent === 'rejected') {
-      document.getElementById('cookie-banner').style.display = 'none';
-    }
-  };
-</script>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        We use cookies to enhance your experience, analyze site usage, and assist in marketing efforts.
+        Read our <a href="/privacy.html" target="_blank">Privacy Policy</a>.
+      </p>
+      <div class="cookie-buttons">
+        <button onclick="acceptCookies()">Accept</button>
+        <button onclick="rejectCookies()">Reject</button>
+      </div>
+    </div>
 
     <script>
-  function zoomImage(img) {
-    const zoomOverlay = document.getElementById('zoomOverlay');
-    const zoomedImage = document.getElementById('zoomedImage');
-    zoomedImage.src = img.src;
-    zoomOverlay.style.display = 'flex';
-  }
+      function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+      }
 
-  function closeZoom() {
-    document.getElementById('zoomOverlay').style.display = 'none';
-  }
-</script>
+      function rejectCookies() {
+        localStorage.setItem('cookieConsent', 'rejected');
+        document.getElementById('cookie-banner').style.display = 'none';
+      }
 
+      window.onload = function () {
+        const consent = localStorage.getItem('cookieConsent');
+        if (consent === 'accepted' || consent === 'rejected') {
+          document.getElementById('cookie-banner').style.display = 'none';
+        }
+      };
+    </script>
 
+    <script>
+      function zoomImage(img) {
+        const zoomOverlay = document.getElementById('zoomOverlay');
+        const zoomedImage = document.getElementById('zoomedImage');
+        zoomedImage.src = img.src;
+        zoomOverlay.style.display = 'flex';
+      }
 
+      function closeZoom() {
+        document.getElementById('zoomOverlay').style.display = 'none';
+      }
+    </script>
 </body>
 </html>
