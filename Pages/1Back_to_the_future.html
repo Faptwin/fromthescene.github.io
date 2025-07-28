@@ -52,5 +52,23 @@
   </script>
 
   <footer>© 2025 From the scene.store — All rights reserved.</footer>
+  
+  <div class="page-transition" id="pageTransition"></div>
+
+<script>
+  function transitionTo(url) {
+    const overlay = document.getElementById("pageTransition");
+    overlay.classList.add("active");
+    setTimeout(() => {
+      window.location.href = url;
+    }, 500); // Время должно совпадать с transition из CSS
+  }
+
+  window.addEventListener("pageshow", () => {
+    const overlay = document.getElementById("pageTransition");
+    overlay.classList.remove("active");
+  });
+</script>
+
 </body>
 </html>
