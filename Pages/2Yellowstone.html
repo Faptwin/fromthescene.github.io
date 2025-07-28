@@ -25,9 +25,9 @@
     </a>
 
     <div class="nav-buttons text-buttons">
-      <button onclick="location.href='1Back_to_the_future.html'">← Back</button>
-      <button onclick="location.href='../index.html'">Home</button>
-      <button onclick="history.forward()">Forward →</button>
+      <button onclick="transitionTo('1Back_to_the_future.html')">← Back</button>
+      <button onclick="transitionTo('../index.html')">Home</button>
+      <button onclick="transitionTo('3Product.html')">Forward →</button>
     </div>
   </div>
 
@@ -52,5 +52,25 @@
   </script>
 
   <footer>© 2025 From the scene.store — All rights reserved.</footer>
+
+  <!-- Page transition overlay -->
+<div class="page-transition" id="pageTransition"></div>
+
+<script>
+  function transitionTo(url) {
+    const overlay = document.getElementById("pageTransition");
+    overlay.classList.add("active");
+    setTimeout(() => {
+      window.location.href = url;
+    }, 500);
+  }
+
+  window.addEventListener("pageshow", () => {
+    const overlay = document.getElementById("pageTransition");
+    overlay.classList.remove("active");
+  });
+</script>
+</body>
+
 </body>
 </html>
