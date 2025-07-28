@@ -107,23 +107,38 @@
 
     <footer>© 2025 From the scene.store — All rights reserved.</footer>
    
-    <div id="cookie-banner" class="cookie-banner">
-  <p>We use cookies to improve your experience. By using our site, you accept cookies.</p>
-  <button onclick="acceptCookies()">Accept</button>
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    We use cookies to enhance your experience, analyze site usage, and assist in marketing efforts.
+    Read our <a href="/privacy.html" target="_blank">Privacy Policy</a>.
+  </p>
+  <div class="cookie-buttons">
+    <button onclick="acceptCookies()">Accept</button>
+    <button onclick="rejectCookies()">Reject</button>
+  </div>
 </div>
 
-    <script>
+
+ <script>
   function acceptCookies() {
-    localStorage.setItem('cookiesAccepted', 'true');
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookie-banner').style.display = 'none';
+    // включи здесь логику, если нужно запускать аналитики
+  }
+
+  function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'rejected');
     document.getElementById('cookie-banner').style.display = 'none';
   }
 
-  window.onload = function() {
-    if (localStorage.getItem('cookiesAccepted') === 'true') {
+  window.onload = function () {
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent === 'accepted' || consent === 'rejected') {
       document.getElementById('cookie-banner').style.display = 'none';
     }
   };
 </script>
+
 
 </body>
 </html>
