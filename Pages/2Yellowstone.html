@@ -2,22 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Yellowstone Hats and Dresses</title>
+  <title>Yellowstone Gear</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Yellowstone Hats and Dresses</h1>
-    <img src="../Covers/yellowstone_logo.png" alt="Yellowstone" style="width:300px; border-radius:12px; margin-bottom: 30px;" />
-    <p class="subtitle">Handmade hats and dresses by Yellowstone characters.</p>
+    <h1>Yellowstone Gear</h1>
 
-    <div class="nav-buttons">
-      <button class="nav-btn back" onclick="history.back()"></button>
-      <button class="nav-btn home" onclick="location.href='../index.html'"></button>
-      <button class="nav-btn forward" onclick="history.forward()"></button>
+    <div class="gallery-row">
+      <img src="../Covers/yellowstone_logo.png" alt="Yellowstone 1" onclick="zoomImage(this)">
+      <img src="../Covers/yellowstone_logo.png" alt="Yellowstone 2" onclick="zoomImage(this)">
+      <img src="../Covers/yellowstone_logo.png" alt="Yellowstone 3" onclick="zoomImage(this)">
+    </div>
+
+    <p class="subtitle">
+      Western gear and rugged style as seen in <strong>Yellowstone</strong> — inspired by the Dutton Ranch legacy.
+    </p>
+
+    <a class="buy-button" href="https://www.ebay.com/sch/i.html?_nkw=yellowstone+tv+gear" target="_blank">
+      🔗 View This Product
+    </a>
+
+    <div class="nav-buttons text-buttons">
+      <button onclick="location.href='1Back_to_the_future.html'">← Back</button>
+      <button onclick="location.href='../index.html'">Home</button>
+      <button onclick="history.forward()">Forward →</button>
     </div>
   </div>
+
+  <!-- Fullscreen zoom container -->
+  <div id="zoomOverlay" onclick="closeZoom()" style="display: none; position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index: 1000;">
+    <img id="zoomedImage" src="" alt="Zoomed Image" style="max-width: 90%; max-height: 90%;">
+  </div>
+
+  <!-- Zoom JS -->
+  <script>
+    function zoomImage(img) {
+      const zoomOverlay = document.getElementById('zoomOverlay');
+      const zoomedImage = document.getElementById('zoomedImage');
+      zoomedImage.src = img.src;
+      zoomOverlay.style.display = 'flex';
+    }
+
+    function closeZoom() {
+      document.getElementById('zoomOverlay').style.display = 'none';
+    }
+  </script>
 
   <footer>© 2025 From the scene.store — All rights reserved.</footer>
 </body>
