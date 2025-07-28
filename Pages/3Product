@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Example Scene Product</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Example Scene Product</h1>
+
+    <div class="gallery-row">
+      <img src="../Covers/example1.jpg" alt="Example 1" onclick="zoomImage(this)">
+      <img src="../Covers/example2.jpg" alt="Example 2" onclick="zoomImage(this)">
+      <img src="../Covers/example3.jpg" alt="Example 3" onclick="zoomImage(this)">
+    </div>
+
+    <p class="subtitle">
+      A unique piece featured in a popular scene — authentic, stylish, and unforgettable.
+    </p>
+
+    <a class="buy-button" href="https://www.ebay.com/sch/i.html?_nkw=movie+scene+product" target="_blank">
+      🔗 View This Product
+    </a>
+
+    <div class="nav-buttons text-buttons">
+      <button onclick="location.href='2Yellowstone.html'">← Back</button>
+      <button onclick="location.href='../index.html'">Home</button>
+      <button onclick="location.href='4Example.html'">Forward →</button>
+    </div>
+  </div>
+
+  <!-- Fullscreen zoom container -->
+  <div id="zoomOverlay" onclick="closeZoom()" style="display: none; position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index: 1000;">
+    <img id="zoomedImage" src="" alt="Zoomed Image" style="max-width: 90%; max-height: 90%;">
+  </div>
+
+  <script>
+    function zoomImage(img) {
+      const zoomOverlay = document.getElementById('zoomOverlay');
+      const zoomedImage = document.getElementById('zoomedImage');
+      zoomedImage.src = img.src;
+      zoomOverlay.style.display = 'flex';
+    }
+
+    function closeZoom() {
+      document.getElementById('zoomOverlay').style.display = 'none';
+    }
+  </script>
+
+  <footer>© 2025 From the scene.store — All rights reserved.</footer>
+</body>
+</html>
