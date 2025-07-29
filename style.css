@@ -122,14 +122,14 @@ body {
 
 .container {
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 4rem;
+  padding: 60px 4rem 40px;
   padding-top: 160px;
   border-radius: 22px;
   max-width: 90vw;
   width: 1600px;
   box-sizing: border-box;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
   flex: 1;
 }
@@ -223,7 +223,8 @@ h1 {
 
 .logo {
   width: 200px;
-  margin-bottom: 35px;
+  margin-top: 0px;
+  margin-bottom: 20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
