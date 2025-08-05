@@ -308,34 +308,35 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 /* Каждая карточка */
 .product-card {
   width: 260px;
-  height: 360px;
+  height: 380px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 12px;
+  padding-top: 26px;
+  padding-bottom:26px;
   box-sizing: border-box;
-  transition: transform 0.3s;
+  transition: transform 0.3s; background-color 0.3s ease;
 }
 
 .product-card:hover {
   transform: scale(1.03);
+  background-color: rgba(255, 255, 255, 0.3)
 }
 
 /* Картинка внутри карточки */
 .product-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
+  width: 200px;
+  height: 300px;
+  object-fit: coмук;
   border-radius: 12px;
   overflow: hidden;
   cursor: zoom-in;
@@ -345,9 +346,8 @@ h1 {
 /* Кнопка под карточкой */
 .product-button {
   display: inline-block;
-  width: 100%;
-  margin-top: 12px;
-  padding: 10px 0;
+  width: 85%;
+  padding: 8px;
   background-color: rgba(255, 102, 0, 0.75);
   color: white;
   text-align: center;
@@ -355,7 +355,8 @@ h1 {
   font-weight: bold;
   border-radius: 10px;
   transition: background 0.3s ease;
-  font-size: 14px;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .product-button:hover {
