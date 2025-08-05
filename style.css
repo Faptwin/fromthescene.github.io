@@ -252,6 +252,11 @@ h1 {
   text-transform: uppercase;
 }
 
+.homepage #product-grid .card-front img,
+.homepage #product-grid .card-back img {
+  border-radius: 16px;
+}
+
 .logo {
   width: 200px;
   margin-top: 0px;
