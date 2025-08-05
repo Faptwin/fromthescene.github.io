@@ -313,15 +313,15 @@ h1 {
 
 /* Каждая карточка */
 .product-card {
-  width: 200px;
-  height: 300px;
-  background-color: rgba(255, 255, 255, 0.07);
+  width: 260px;
+  height: 360px;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 12px;
   box-sizing: border-box;
   transition: transform 0.3s;
@@ -337,6 +337,7 @@ h1 {
   height: 200px;
   object-fit: contain;
   border-radius: 12px;
+  overflow: hidden;
   cursor: zoom-in;
   transition: transform 0.3s;
 }
@@ -345,6 +346,7 @@ h1 {
 .product-button {
   display: inline-block;
   width: 100%;
+  margin-top: 12px;
   padding: 10px 0;
   background-color: rgba(255, 102, 0, 0.75);
   color: white;
