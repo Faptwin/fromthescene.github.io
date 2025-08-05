@@ -311,6 +311,8 @@ h1 {
 }
 
 .product-block {
+  border-radius: 16px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
