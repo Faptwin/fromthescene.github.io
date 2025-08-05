@@ -15,14 +15,12 @@
   background-color: #e65c00;
 }
 
-body {
+ .body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   color: white;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
@@ -152,11 +150,11 @@ body {
 
 .container {
   background-color: rgba(0, 0, 0, 0.3);
-  padding: 60px 4rem 40px;
-  padding-top: 160px;
+  padding: 60px 2rem 40px;
+  padding-top: 140px;
   border-radius: 22px;
-  max-width: 90vw;
-  width: 1600px;
+  max-width: 1200px;
+  width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: 30px;
@@ -242,6 +240,12 @@ footer {
   padding: 40px;
   max-width: 1600px;
   margin: 0 auto;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 h1 {
