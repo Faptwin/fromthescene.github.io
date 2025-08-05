@@ -302,6 +302,29 @@ h1 {
   pointer-events: auto;
 }
 
+.products-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.product-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 220px;
+}
+
+.product-block img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
 .social-icons {
   display: flex;
   justify-content: center;
