@@ -149,11 +149,11 @@
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 60px 2rem 40px;
   padding-top: 140px;
   border-radius: 22px;
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
