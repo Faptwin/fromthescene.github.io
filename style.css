@@ -226,7 +226,6 @@ footer {
 
 .gallery-row img {
   width: 200px;
-  border-radius: 10px;
   cursor: zoom-in;
   transition: transform 0.3s;
 }
@@ -303,32 +302,62 @@ h1 {
   pointer-events: auto;
 }
 
-.products-grid {
+/* Контейнер для карточек */
+.product-grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
-  margin: 40px 0;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.product-block {
+/* Каждая карточка */
+.product-card {
+  width: 200px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 220px;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  padding: 12px;
+  box-sizing: border-box;
+  transition: transform 0.3s;
 }
 
-.product-block img {
-  width: 270px;
-  height: 270px;
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+/* Картинка внутри карточки */
+.product-card img {
+  width: 100%;
+  height: 200px;
   object-fit: contain;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin-bottom: 10px;
-  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.3s;
+}
+
+/* Кнопка под карточкой */
+.product-button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(255, 102, 0, 0.75);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+.product-button:hover {
+  background-color: #ff6600;
 }
 
 .social-icons {
