@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Back to the future 2</title>
+  <title>Back to the Future II</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../style.css" />
- <link rel="icon" type="image/png" href="../icons/favicon.ico" />
+  <link rel="icon" type="image/png" href="../icons/favicon.ico" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X722H14S20"></script>
@@ -17,31 +17,27 @@
   </script>
 </head>
 <body class="bg-Backtothefuture">
-  <div class="container">
-    <h1>Back to the future II</h1>
 
-    <div class="gallery-row">
-      <img src="../Products/TimeMachine.png" alt="Time Machine" onclick="zoomImage(this)">
-      <img src="../Products/Almanac.jpg" alt="Almanac" onclick="zoomImage(this)">
-      <img src="../Products/BTTF2tishirt.jpg" alt="Back To The Future T-Shirt" onclick="zoomImage(this)">
+  <div class="container">
+    <h1>BACK TO THE FUTURE II</h1>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="../Products/TimeMachine.png" alt="Time Machine" onclick="zoomImage(this)">
+        <a href="https://amzn.to/47cRS8s" class="product-button" target="_blank">1:24 Time Machine</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../Products/Almanac.jpg" alt="Almanac" onclick="zoomImage(this)">
+        <a href="https://amzn.to/45yTPuO" class="product-button" target="_blank">Almanac 1950–2000</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../Products/BTTF2tishirt.jpg" alt="T-Shirt" onclick="zoomImage(this)">
+        <a href="https://amzn.to/4mrleEC" class="product-button" target="_blank">Back to the Future T-Shirt</a>
+      </div>
     </div>
 
-    <p class="subtitle">
-      Iconic products from <strong>Back to the future II</strong>.
-    </p>
-
-    <a class="buy-button" href="https://amzn.to/47cRS8s" target="_blank">
-      🔗 1:24 Time Machine
-    </a>
-
-    <a class="buy-button" href="https://amzn.to/45yTPuO" target="_blank">
-      🔗 Almanac 1950-2000
-    </a>
-
-    <a class="buy-button" href="https://amzn.to/4mrleEC" target="_blank">
-      🔗 Back To The Future T-Shirt
-    </a>
-    
     <div class="nav-buttons text-buttons">
       <button onclick="transitionTo('Yellowstone.html')">← Back</button>
       <button onclick="transitionTo('../index.html')">Home</button>
@@ -72,23 +68,22 @@
   <footer>© 2025 From the scene.store — All rights reserved.</footer>
 
   <!-- Page transition overlay -->
-<div class="page-transition" id="pageTransition"></div>
+  <div class="page-transition" id="pageTransition"></div>
 
-<script>
-  function transitionTo(url) {
-    const overlay = document.getElementById("pageTransition");
-    overlay.classList.add("active");
-    setTimeout(() => {
-      window.location.href = url;
-    }, 500);
-  }
+  <script>
+    function transitionTo(url) {
+      const overlay = document.getElementById("pageTransition");
+      overlay.classList.add("active");
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500);
+    }
 
-  window.addEventListener("pageshow", () => {
-    const overlay = document.getElementById("pageTransition");
-    overlay.classList.remove("active");
-  });
-</script>
-</body>
-  
+    window.addEventListener("pageshow", () => {
+      const overlay = document.getElementById("pageTransition");
+      overlay.classList.remove("active");
+    });
+  </script>
+
 </body>
 </html>
