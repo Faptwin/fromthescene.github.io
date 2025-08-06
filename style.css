@@ -226,6 +226,7 @@ footer {
   padding: 40px;
   max-width: 1600px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 
