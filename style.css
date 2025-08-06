@@ -1,3 +1,4 @@
+/* Стили для кнопки "Назад домой" */
 .back-home-btn {
   background-color: rgba(255, 102, 0, 0.5); /* полупрозрачный */
   color: white;
@@ -15,8 +16,7 @@
   background-color: #ff6600;
 }
 
-
- body {
+body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   color: white;
@@ -57,22 +57,21 @@
   background-attachment: fixed;
 }
 
-
 .buy-button {
   display: inline-block;
   margin-top: 10px;
-  padding: 8px 16px; /* уменьшенный размер */
-  background-color: rgba(255, 255, 255, 0.75); /* полупрозрачный белый */
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.75);
   color: black;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px; /* меньше шрифт */
+  font-size: 15px;
   border-radius: 8px;
   transition: background 0.2s;
 }
 
 .buy-button:hover {
-  background-color: rgba(255, 255, 255, 0.75); /* чуть ярче при наведении */
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 .card-wrapper {
@@ -85,7 +84,7 @@
 
 .card {
   width: 100%;
-  height: 293px; /* 3:4 соотношение */
+  height: 293px;
   perspective: 1000px;
   cursor: pointer;
   position: relative;
@@ -145,7 +144,6 @@
   text-align: center;
   flex: 1;
 }
-
 
 .cookie-banner {
   position: fixed;
@@ -220,7 +218,7 @@ footer {
 .grid,
 #product-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Всегда 5 колонок на десктопе */
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   justify-content: center;
   padding: 40px;
@@ -229,16 +227,16 @@ footer {
   box-sizing: border-box;
 }
 
-/* Адаптация под мобильные */
 @media (max-width: 768px) {
   body.homepage .grid,
   body.homepage #product-grid {
-    grid-template-columns: repeat(1, 1fr); /* только на главной — по 1 */
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   body:not(.homepage) .grid,
   body:not(.homepage) #product-grid {
-    grid-template-columns: repeat(2, 1fr); /* на остальных страницах — по 2 */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card {
@@ -249,8 +247,6 @@ footer {
     font-size: 14px;
   }
 }
-
-
 
 html, body {
   padding: 0;
@@ -263,35 +259,32 @@ h1 {
   text-transform: uppercase;
 }
 
-/* ===== Стили карточек только для главной страницы ===== */
-
 .homepage .card-wrapper {
-  width: 190px; /* Задаём индивидуальную ширину карточки на главной */
+  width: 190px;
 }
 
 .homepage .card {
-  height: 280px; /* Высота карточки только на главной */
-  /* Сохраняется perspective из базовых стилей — flip работает */
+  height: 280px;
 }
 
 .homepage .card-front,
 .homepage .card-back {
-  border-radius: 7px; /* Скругляем края обеих сторон карточки */
-  overflow: hidden;    /* Обрезаем всё, что выходит за границы */
+  border-radius: 7px;
+  overflow: hidden;
 }
 
 .homepage .card-front img,
 .homepage .card-back img {
-  width: 100%;           /* Картинка занимает всю ширину карточки */
-  height: 100%;          /* и всю высоту */
-  object-fit: cover;     /* Картинка заполняет блок, сохраняя пропорции (обрезается) */
-  border-radius: 5px;   /* Скругляем углы самих изображений */
-  padding: 0;            /* Убираем внутренние отступы у картинок */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  padding: 0;
 }
 
 .homepage .card-title {
-  font-size: 18px;     /* Уменьшенный размер подписи под карточкой */
-  margin-top: 12px;     /* Отступ сверху для отделения от карточки */
+  font-size: 18px;
+  margin-top: 12px;
 }
 
 @media (max-width: 768px) {
@@ -303,13 +296,8 @@ h1 {
 
   .homepage .card {
     height: auto;
-
-  .homepage #product-grid {
-  flex-direction: column;
-  align-items: center;
   }
 }
-
 
 .logo {
   width: 200px;
@@ -363,7 +351,6 @@ h1 {
   pointer-events: auto;
 }
 
-/* Контейнер для карточек */
 .product-grid {
   display: flex;
   flex-wrap: wrap;
@@ -372,7 +359,6 @@ h1 {
   margin-top: 50px;
 }
 
-/* Каждая карточка */
 .product-card {
   width: 260px;
   height: 380px;
@@ -393,18 +379,16 @@ h1 {
   background-color: rgba(255, 255, 255, 0.3)
 }
 
-/* Картинка внутри карточки */
 .product-card img {
   width: 200px;
   height: 300px;
-  object-fit: coмук;
+  object-fit: cover;
   border-radius: 12px;
   overflow: hidden;
   cursor: zoom-in;
   transition: transform 0.3s;
 }
 
-/* Кнопка под карточкой */
 .product-button {
   display: inline-block;
   width: 85%;
@@ -466,7 +450,7 @@ h1 {
 }
 
 .text-buttons button {
-  background-color: rgba(255, 102, 0, 0.6); /* полупрозрачный */
+  background-color: rgba(255, 102, 0, 0.6);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -478,11 +462,9 @@ h1 {
 }
 
 .text-buttons button:hover {
-  background-color: #ff6600; /* яркий при наведении */
+  background-color: #ff6600;
 }
 
-
-/* Fullscreen zoom overlay */
 #zoomOverlay {
   display: none;
   position: fixed;
