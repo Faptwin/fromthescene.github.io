@@ -220,11 +220,11 @@ footer {
 .grid,
 #product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* лучше под 5 в ряд */
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr); /* Всегда 5 колонок на десктопе */
+  gap: 30px;
   justify-content: center;
   padding: 40px;
-  max-width: 1400px; /* уменьшили, чтобы уместилось 5 */
+  max-width: 1600px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -238,7 +238,7 @@ footer {
 
   body:not(.homepage) .grid,
   body:not(.homepage) #product-grid {
-    grid-template-columns: repeat(1, 1fr); /* на остальных страницах — по 2 */
+    grid-template-columns: repeat(2, 1fr); /* на остальных страницах — по 2 */
   }
 
   .card {
@@ -265,17 +265,6 @@ h1 {
 }
 
 /* ===== Стили карточек только для главной страницы ===== */
-.homepage #product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0 auto;           /* добавим центровку */
-  max-width: 100%;          /* чтобы не вылезало */
-}
 
 .homepage .card-wrapper {
   width: 190px; /* Задаём индивидуальную ширину карточки на главной */
