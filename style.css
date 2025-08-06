@@ -220,7 +220,7 @@ footer {
 .grid,
 #product-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* адаптив на 5 */
   gap: 30px;
   justify-content: center;
   padding: 40px;
@@ -228,22 +228,28 @@ footer {
   margin: 0 auto;
 }
 
+
 /* Адаптация под мобильные */
 @media (max-width: 768px) {
-  .grid,
-  #product-grid {
-    grid-template-columns: repeat(2, 1fr); /* по 2 карточки на ряд */
-    padding: 20px;
+  body.homepage .grid,
+  body.homepage #product-grid {
+    grid-template-columns: repeat(1, 1fr); /* только на главной — по 1 */
+  }
+
+  body:not(.homepage) .grid,
+  body:not(.homepage) #product-grid {
+    grid-template-columns: repeat(1, 1fr); /* на остальных страницах — по 2 */
   }
 
   .card {
-    height: 213px; /* сохраняем 3:4 для 160px */
+    height: 213px;
   }
 
   .card-title {
     font-size: 14px;
   }
 }
+
 
 
 html, body {
