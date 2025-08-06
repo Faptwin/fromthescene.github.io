@@ -220,15 +220,14 @@ footer {
 .grid,
 #product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* адаптив на 5 */
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* лучше под 5 в ряд */
+  gap: 20px;
   justify-content: center;
   padding: 40px;
-  max-width: 1600px;
+  max-width: 1400px; /* уменьшили, чтобы уместилось 5 */
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 
 /* Адаптация под мобильные */
 @media (max-width: 768px) {
@@ -274,6 +273,8 @@ h1 {
   padding: 20px;
   box-sizing: border-box;
   width: 100%;
+  margin: 0 auto;           /* добавим центровку */
+  max-width: 100%;          /* чтобы не вылезало */
 }
 
 .homepage .card-wrapper {
@@ -314,6 +315,10 @@ h1 {
 
   .homepage .card {
     height: auto;
+
+  .homepage #product-grid {
+  flex-direction: column;
+  align-items: center;
   }
 }
 
