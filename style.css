@@ -42,7 +42,7 @@
 }
 
 .bg-Backtothefuture {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/BackToTheFuturebg.jpg');
+  background-image: url('images/BackToTheFuturebg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 }
 
 .bg-Twinpeaks {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/Twinpeaks_wall.jpg');
+  background-image: url('images/Twinpeaks_wall.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -253,7 +253,6 @@ footer {
 
 
 html, body {
-  margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
