@@ -252,10 +252,36 @@ h1 {
   text-transform: uppercase;
 }
 
-.homepage #product-grid .card-front img,
-.homepage #product-grid .card-back img {
-  border-radius: 16px;
+/* ===== Стили карточек только для главной страницы ===== */
+.homepage .card-wrapper {
+  width: 200px; /* Задаём индивидуальную ширину карточки на главной */
 }
+
+.homepage .card {
+  height: 280px; /* Высота карточки только на главной */
+  /* Сохраняется perspective из базовых стилей — flip работает */
+}
+
+.homepage .card-front,
+.homepage .card-back {
+  border-radius: 16px; /* Скругляем края обеих сторон карточки */
+  overflow: hidden;    /* Обрезаем всё, что выходит за границы */
+}
+
+.homepage .card-front img,
+.homepage .card-back img {
+  width: 100%;           /* Картинка занимает всю ширину карточки */
+  height: 100%;          /* и всю высоту */
+  object-fit: cover;     /* Картинка заполняет блок, сохраняя пропорции (обрезается) */
+  border-radius: 16px;   /* Скругляем углы самих изображений */
+  padding: 0;            /* Убираем внутренние отступы у картинок */
+}
+
+.homepage .card-title {
+  font-size: 16px;     /* Уменьшенный размер подписи под карточкой */
+  margin-top: 8px;     /* Отступ сверху для отделения от карточки */
+}
+
 
 .logo {
   width: 200px;
