@@ -5,7 +5,7 @@
   <title>Twin Peaks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../style.css" />
- <link rel="icon" type="image/png" href="../icons/favicon.ico" />
+  <link rel="icon" type="image/png" href="../icons/favicon.ico" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X722H14S20"></script>
@@ -17,24 +17,28 @@
   </script>
 </head>
 <body class="bg-Twinpeaks">
+
   <div class="container">
     <h1>TWIN PEAKS</h1>
 
-    <div class="gallery-row">
-      <img src="../Products/TwinPeaks_key_tag.jpg" alt="Key Tag" onclick="zoomImage(this)">
-      <img src="../Covers/blank.jpg" alt="Example 2" onclick="zoomImage(this)">
-      <img src="../Covers/blank.jpg" alt="Example 3" onclick="zoomImage(this)">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="../Products/TwinPeaks_key_tag.jpg" alt="Key Tag" onclick="zoomImage(this)">
+        <a href="https://amzn.to/4flfREB" class="product-button" target="_blank">Twin Peaks Key Tag</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../Covers/blank.jpg" alt="Example 2" onclick="zoomImage(this)">
+        <a href="#" class="product-button" target="_blank">Example Product 2</a>
+      </div>
+
+      <div class="product-card">
+        <img src="../Covers/blank.jpg" alt="Example 3" onclick="zoomImage(this)">
+        <a href="#" class="product-button" target="_blank">Example Product 3</a>
+      </div>
     </div>
 
-    <p class="subtitle">
-      Iconic products from <strong>Twin Peaks</strong>.
-    </p>
-
-    <a class="buy-button" href="https://amzn.to/4flfREB" target="_blank">
-      🔗 Twin Peaks Key Tag
-    </a>
-
-     <div class="nav-buttons text-buttons">
+    <div class="nav-buttons text-buttons">
       <button onclick="transitionTo('Back to the future.html')">← Back</button>
       <button onclick="transitionTo('../index.html')">Home</button>
       <button onclick="transitionTo('1Back_to_the_future.html')">Forward →</button>
@@ -63,23 +67,22 @@
   <footer>© 2025 From the scene.store — All rights reserved.</footer>
 
   <!-- Page transition overlay -->
-<div class="page-transition" id="pageTransition"></div>
+  <div class="page-transition" id="pageTransition"></div>
 
-<script>
-  function transitionTo(url) {
-    const overlay = document.getElementById("pageTransition");
-    overlay.classList.add("active");
-    setTimeout(() => {
-      window.location.href = url;
-    }, 500);
-  }
+  <script>
+    function transitionTo(url) {
+      const overlay = document.getElementById("pageTransition");
+      overlay.classList.add("active");
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500);
+    }
 
-  window.addEventListener("pageshow", () => {
-    const overlay = document.getElementById("pageTransition");
-    overlay.classList.remove("active");
-  });
-</script>
-</body>
-  
+    window.addEventListener("pageshow", () => {
+      const overlay = document.getElementById("pageTransition");
+      overlay.classList.remove("active");
+    });
+  </script>
+
 </body>
 </html>
