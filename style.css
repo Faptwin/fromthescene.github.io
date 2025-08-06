@@ -219,10 +219,10 @@ footer {
 #product-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
   padding: 40px;
-  max-width: 1600px;
+  max-width: 1800px;
   margin: 0 auto;
   box-sizing: border-box;
 }
