@@ -230,13 +230,17 @@ footer {
 @media (max-width: 768px) {
   body.homepage .grid,
   body.homepage #product-grid {
+    display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    padding: 20px;
   }
 
   body:not(.homepage) .grid,
   body:not(.homepage) #product-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .card {
@@ -246,16 +250,15 @@ footer {
   .card-title {
     font-size: 14px;
   }
-  
+
   .homepage .card-front img,
   .homepage .card-back img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-  padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    padding: 0;
   }
-  
 }
 
 html, body {
