@@ -134,23 +134,6 @@
   color: white;
 }
 
-/* Адаптация под мобильные */
-@media (max-width: 768px) {
-  .grid,
-  #product-grid {
-    grid-template-columns: repeat(2, 1fr); /* по 2 карточки на ряд */
-    padding: 20px;
-  }
-
-  .card {
-    height: 213px; /* сохраняем 3:4 для 160px */
-  }
-
-  .card-title {
-    font-size: 14px;
-  }
-}
-
 .container {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 40px 20px 40px;
@@ -245,6 +228,22 @@ footer {
   margin: 0 auto;
 }
 
+/* Адаптация под мобильные */
+@media (max-width: 768px) {
+  .grid,
+  #product-grid {
+    grid-template-columns: repeat(2, 1fr); /* по 2 карточки на ряд */
+    padding: 20px;
+  }
+
+  .card {
+    height: 213px; /* сохраняем 3:4 для 160px */
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+}
 
 
 html, body {
