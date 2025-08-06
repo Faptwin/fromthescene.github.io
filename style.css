@@ -1,19 +1,20 @@
 .back-home-btn {
-  background-color: #ff6600;
+  background-color: rgba(255, 102, 0, 0.5); /* полупрозрачный */
   color: white;
   border: none;
   padding: 12px 20px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s ease;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .back-home-btn:hover {
-  background-color: #e65c00;
+  background-color: #ff6600;
 }
+
 
  body {
   margin: 0;
@@ -138,8 +139,8 @@
   .grid,
   #product-grid {
     grid-template-columns: repeat(2, 1fr); /* по 2 карточки на ряд */
+    padding: 20px;
   }
-}
 
   .card {
     height: 213px; /* сохраняем 3:4 для 160px */
@@ -161,6 +162,7 @@
   text-align: center;
   flex: 1;
 }
+
 
 .cookie-banner {
   position: fixed;
@@ -235,13 +237,14 @@ footer {
 .grid,
 #product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   justify-content: center;
   padding: 40px;
   max-width: 1600px;
   margin: 0 auto;
 }
+
 
 
 html, body {
@@ -385,7 +388,7 @@ h1 {
   display: inline-block;
   width: 85%;
   padding: 8px;
-  background-color: rgba(255, 102, 0, 0.75);
+  background-color: rgba(255, 102, 0, 0.6);
   color: white;
   text-align: center;
   text-decoration: none;
@@ -442,7 +445,7 @@ h1 {
 }
 
 .text-buttons button {
-  background-color: #ff6600;
+  background-color: rgba(255, 102, 0, 0.6); /* полупрозрачный */
   color: white;
   border: none;
   padding: 12px 20px;
@@ -454,8 +457,9 @@ h1 {
 }
 
 .text-buttons button:hover {
-  background-color: #e65c00;
+  background-color: #ff6600; /* яркий при наведении */
 }
+
 
 /* Fullscreen zoom overlay */
 #zoomOverlay {
