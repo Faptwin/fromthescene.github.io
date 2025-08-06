@@ -463,7 +463,7 @@ h1 {
   body:not(.homepage) .grid,
   body:not(.homepage) #product-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
 
@@ -476,13 +476,13 @@ h1 {
   }
 
   .homepage .card-wrapper {
-    width: 90%;
-    max-width: 300px;
-    margin: 10px auto;
+    width: 100%;
+    max-width: 320px;
+    margin: 15px auto;
   }
 
   .homepage .card {
-    height: auto;
+    height: 450px;
   }
 
   .homepage .card-inner,
@@ -496,7 +496,8 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 0;
   }
 }
+
