@@ -246,6 +246,7 @@ footer {
   .card-title {
     font-size: 14px;
   }
+  
   .homepage .card-front img,
   .homepage .card-back img {
   width: 100%;
@@ -253,6 +254,8 @@ footer {
   object-fit: cover;
   border-radius: 5px;
   padding: 0;
+}
+  
 }
 
 }
