@@ -57,6 +57,22 @@ body {
   background-attachment: fixed;
 }
 
+.bg-Friends {
+  background-image: url('images/Friends_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-HungerGames {
+  background-image: url('images/HungerGames_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .buy-button {
   display: inline-block;
   margin-top: 10px;
