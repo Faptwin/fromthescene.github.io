@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Big Bang Theory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/png" href="../icons/favicon.ico" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X722H14S20"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X722H14S20');
+  </script>
+</head>
+<body class="bg-TheBigBangTheory">
+
+  <div class="container">
+    <h1>THE BIG BANG THEORY</h1>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="../Products/tbbt-item1.jpg" alt="Product 1" onclick="zoomImage(this)">
+        <a href="#" class="product-button" target="_blank">Product 1</a>
+      </div>
+      <div class="product-card">
+        <img src="../Products/tbbt-item2.jpg" alt="Product 2" onclick="zoomImage(this)">
+        <a href="#" class="product-button" target="_blank">Product 2</a>
+      </div>
+      <div class="product-card">
+        <img src="../Products/tbbt-item3.jpg" alt="Product 3" onclick="zoomImage(this)">
+        <a href="#" class="product-button" target="_blank">Product 3</a>
+      </div>
+      <div class="product-card">
+        <img src="../Products/tbbt-item4.jpg" alt="Product 4" onclick="zoomImage(this)">
+        <a href="#" class="product-button" target="_blank">Product 4</a>
+      </div>
+      <div class="product-card">
+        <img src="../Products/tbbt-item5.jpg" alt="Product 5" onclick="zoomImage(this)">
+        <a href="#" class="product-button" target="_blank">Product 5</a>
+      </div>
+    </div>
+
+    <div class="nav-buttons text-buttons">
+      <button onclick="transitionTo('Ted Lasso.html')">← Back</button>
+      <button onclick="transitionTo('../index.html')">Home</button>
+      <button onclick="transitionTo('South_Park.html')">Forward →</button>
+    </div>
+  </div>
+
+  <div id="zoomOverlay" onclick="closeZoom()">
+    <img id="zoomedImage" src="" alt="Zoomed Image">
+  </div>
+
+  <script>
+    function zoomImage(img) {
+      const zoomOverlay = document.getElementById('zoomOverlay');
+      const zoomedImage = document.getElementById('zoomedImage');
+      zoomedImage.src = img.src;
+      zoomOverlay.style.display = 'flex';
+    }
+    function closeZoom() {
+      document.getElementById('zoomOverlay').style.display = 'none';
+    }
+  </script>
+
+  <footer>© 2025 From the scene.store — All rights reserved.</footer>
+
+  <div class="page-transition" id="pageTransition"></div>
+
+  <script>
+    function transitionTo(url) {
+      const overlay = document.getElementById("pageTransition");
+      overlay.classList.add("active");
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500);
+    }
+    window.addEventListener("pageshow", () => {
+      document.getElementById("pageTransition").classList.remove("active");
+    });
+  </script>
+
+</body>
+</html>
