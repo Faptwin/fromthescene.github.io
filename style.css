@@ -537,5 +537,15 @@ h1 {
     border-radius: 15px;
     padding: 0;
   }
+    /* На телефоне отключаем flip и показываем только фронт */
+  .card-inner {
+    transform: none !important;
+  }
+  .card:hover .card-inner {
+    transform: none !important;
+  }
+  .card-back {
+    display: none !important;
+  }
 }
 
