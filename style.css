@@ -73,6 +73,47 @@ body {
   background-attachment: fixed;
 }
 
+.bg-RickAndMorty {
+  background-image: url('images/rick-and-morty_wall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-TedLasso {
+  background-image: url('images/ted-lasso_wall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-TheBigBangTheory {
+  background-image: url('images/the-big-bang-theory_wall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-SouthPark {
+  background-image: url('images/south-park_wall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-StarTrek {
+  background-image: url('images/star-trek_wall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
 .buy-button {
   display: inline-block;
   margin-top: 10px;
