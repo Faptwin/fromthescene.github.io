@@ -425,6 +425,22 @@ h1 {
   margin-bottom: 60px;
 }
 
+.search-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#searchInput {
+  padding: 10px 15px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 .text-buttons {
   display: flex;
   justify-content: center;
